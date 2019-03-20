@@ -11,6 +11,7 @@ class SuperSizeMe:
         self._output_size = None
 
     def read_csv(self, path, header=True):
+        self.data.clear()
         try:
             with open(path, 'r') as input:
                 data = csv.reader(input)
