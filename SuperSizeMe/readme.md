@@ -18,7 +18,9 @@ Time benchmark: expanding 1KB csv file to 2GBs took ~60 seconds.
 Example usage of script:
 
 ```
-from supersizeme import SuperSizeMe as ssm
+from supersizeme import SuperSizeMe
+
+ssm = SuperSizeMe()
 
 ssm.read_csv('/path/to/input/file.csv').
     expand_to(500).
