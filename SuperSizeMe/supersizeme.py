@@ -1,6 +1,7 @@
 import os
 import csv
 
+
 class SuperSizeMe:
     def __init__(self):
         self.data = []
@@ -41,8 +42,7 @@ class SuperSizeMe:
             print('File already exists. Please choose another path.')
             return self
 
-        iterations = int(round(self._output_size / self._input_file_size, 0)) + 1
-        print()
+        iterations = int(round(self._output_size / self._input_file_size, 0) * 1.1)
         with open(output_path, 'w') as output:
             writer = csv.writer(output)
 
@@ -52,3 +52,4 @@ class SuperSizeMe:
             for i in range(iterations):
                 writer.writerows(self.data)
         print('Success!')
+
