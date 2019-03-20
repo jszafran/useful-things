@@ -56,7 +56,7 @@ expand_to()
 arg1: size (int)
 returns: self
 ```
-Size of the input file you're expecting to have.
+Size of the input file you're expecting to have (in MBs).
 
 Please note that calling this function will not trigger any write action
 on your filesystem - it is just validating input + setting value of
