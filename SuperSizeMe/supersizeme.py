@@ -41,6 +41,9 @@ class SuperSizeMe:
         if os.path.exists(output_path):
             print('File already exists. Please choose another path.')
             return self
+        if not self._input_file_path:
+            print('Please ensure you have used method \'read_csv\' to load input data.')
+            return self
 
         iterations = int(round(self._output_size / self._input_file_size, 0) * 1.1)
         with open(output_path, 'w') as output:
